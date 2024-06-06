@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    font-family: 'Playfair Display'
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+.love-message {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.panda {
+    width: 150px;
+    animation: dance 1s infinite;
+}
+
+@keyframes dance {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.sprinkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: pink;
+    border-radius: 50%;
+    animation: fall 5s linear infinite;
+    opacity: 0;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
